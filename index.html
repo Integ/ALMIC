@@ -45,6 +45,15 @@
                 'phone': '电话',
                 'email': '邮箱',
                 'name': '姓名',
+                'country': '所在国家',
+                'occupation': '职业',
+                'company': '公司/医疗机构名称',
+                'inquiryType': '咨询类型',
+                'salesRep': '销售代表拜访',
+                'sampleTest': '样品测试',
+                'buy': '购买',
+                'academicResearch': '学术研究',
+                'advise': '咨询建议',
                 'message': '留言',
                 'submit': '提交',
                 'followUs': '关注我们',
@@ -135,6 +144,15 @@
                 'phone': 'Phone',
                 'email': 'Email',
                 'name': 'Name',
+                'country': 'Country',
+                'occupation': 'Occupation',
+                'company': 'Company/Medical Institution',
+                'inquiryType': 'Inquiry Type',
+                'salesRep': 'Sales Representative Visit',
+                'sampleTest': 'Sample Test',
+                'buy': 'Purchase',
+                'academicResearch': 'Academic Research',
+                'advise': 'Consultation',
                 'message': 'Message',
                 'submit': 'Submit',
                 'followUs': 'Follow Us',
@@ -242,12 +260,21 @@
             
             // 获取表单数据
             const formData = new FormData(form);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+            const data = {
+                name: formData.get('name'),
+                country: formData.get('country'),
+                address: formData.get('address'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                occupation: formData.get('occupation'),
+                company: formData.get('company'),
+                inquiryType: formData.get('inquiryType'),
+                message: formData.get('message')
+            };
             
             // 验证必填字段
-            if (!name || !email || !message) {
+            if (!data.name || !data.country || !data.address || !data.email || !data.phone || 
+                !data.occupation || !data.company || !data.inquiryType || !data.message) {
                 alert(translations[currentLang]['formRequired']);
                 return;
             }
@@ -263,11 +290,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        message: message
-                    })
+                    body: JSON.stringify(data)
                 });
                 
                 if (response.ok) {
@@ -712,7 +735,8 @@
                 <div class="text-gray-700">
                     <p class="mb-2"><span data-i18n="address">地址</span>：Victoria BC, Canada</p>
                     <p class="mb-2"><span data-i18n="phone">电话</span>：+1-250-XXX-XXXX</p>
-                    <p><span data-i18n="email">邮箱</span>：info@almic.com</p>
+                    <p class="mb-2"><span data-i18n="email">邮箱</span>：david@almic.ca</p>
+                    <img src="/qrcode.png" alt="WeChat QR Code" class="mt-2 w-32 h-32">
                 </div>
             </div>
             <div>
@@ -725,11 +749,59 @@
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                     <div class="mb-4">
+                        <label for="country" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span data-i18n="country">所在国家</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="country" name="country" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span data-i18n="address">地址</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="address" name="address" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
-                            <span data-i18n="email">邮箱</span> <span class="text-red-500">*</span>
+                            <span data-i18n="email">联系邮箱</span> <span class="text-red-500">*</span>
                         </label>
                         <input type="email" id="email" name="email" required
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span data-i18n="phone">联系电话</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="occupation" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span data-i18n="occupation">职业</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="occupation" name="occupation" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="company" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span data-i18n="company">公司/医疗机构名称</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="company" name="company" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="inquiryType" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span data-i18n="inquiryType">咨询类型</span> <span class="text-red-500">*</span>
+                        </label>
+                        <select id="inquiryType" name="inquiryType" required
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="salesRep" data-i18n="salesRep">销售代表拜访</option>
+                            <option value="sampleTest" data-i18n="sampleTest">样品测试</option>
+                            <option value="buy" data-i18n="buy">购买</option>
+                            <option value="academicResearch" data-i18n="academicResearch">学术研究</option>
+                            <option value="advise" data-i18n="advise">咨询建议</option>
+                        </select>
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-gray-700 text-sm font-bold mb-2">
@@ -759,7 +831,7 @@
                     <h3 class="text-lg font-semibold mb-4" data-i18n="contactUs">联系我们</h3>
                     <p class="text-gray-400 mb-2">Victoria BC, Canada</p>
                     <p class="text-gray-400 mb-2">+1-250-XXX-XXXX</p>
-                    <p class="text-gray-400">info@almic.com</p>
+                    <p class="text-gray-400 mb-2">david@almic.ca</p>
                 </div>
                 <div class="text-center md:text-right">
                     <h3 class="text-lg font-semibold mb-4" data-i18n="followUs">关注我们</h3>
