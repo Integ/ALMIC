@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALMIC - ophthalmic surgical instrument design and manufacturing</title>
+    <title>ALMIC – Focused on Ophthalmology, Serving the World</title>
     <meta name="description" content="ALMIC 是一家位于加拿大维多利亚的眼科手术器械设计和生产公司。我们专注于创新、高质量的眼科解决方案。">
     <meta name="keywords" content="眼科手术器械, 手术器械, 眼科产品, 医疗器械, 加拿大, 维多利亚, ALMIC">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +21,13 @@
                 'products': '产品中心',
                 'news': '新闻中心',
                 'contact': '联系我们',
+                'pageTitle': 'ALMIC —— 专注眼科，服务全球',
                 'viewProducts': '查看我们的产品',
-                'aboutUsDesc1': 'ALMIC 是一家位于加拿大维多利亚的眼科手术器械设计和生产公司。我们拥有多年的行业经验，专注于为全球眼科医生提供创新、高质量的解决方案。',
-                'aboutUsDesc2': '我们拥有先进的精密仪器设计和加工技术，以及多项专利技术，确保我们的产品在性能和可靠性方面达到最高标准。',
-                'aboutUsDesc3': '我们致力于与客户建立长期的合作伙伴关系，并提供卓越的客户服务和支持。',
+                'aboutUsDesc1': 'ALMIC — 专注眼科，服务全球',
+                'aboutUsDesc2': 'ALMIC 深耕眼科领域二十余年，业务遍及加拿大与中国，每年服务超过一百万名患者。',
+                'aboutUsDesc3': '作为一次性微创外科器械的专业制造商，ALMIC 不断创新，研发用于玻璃体切割的一次性使用波切头及相关技术，为全球眼科专业人士提供可靠的解决方案。',
+                'aboutUsDesc4': '除产品制造外，ALMIC 还在加拿大和中国提供视光服务。我们专业的眼科销售团队，始终以敬业的态度为您提供优质服务。',
+                'aboutUsDesc5': '我们诚挚邀请您的关注与合作，共同推进全球眼健康事业。',
                 'productCenter': '产品中心',
                 'viewDetails': '查看详情',
                 'patentProduct': '专利产品',
@@ -119,11 +122,14 @@
                 'products': 'Products',
                 'news': 'News',
                 'contact': 'Contact',
+                'pageTitle': 'ALMIC – Focused on Ophthalmology, Serving the World',
                 'viewProducts': 'View Our Products',
                 'aboutUs': 'About Us',
-                'aboutUsDesc1': 'ALMIC is an ophthalmic surgical instrument design and manufacturing company located in Victoria, Canada. With years of industry experience, we focus on providing innovative, high-quality solutions for ophthalmologists worldwide.',
-                'aboutUsDesc2': 'We possess advanced precision instrument design and processing technology, along with multiple patented technologies, ensuring our products meet the highest standards in performance and reliability.',
-                'aboutUsDesc3': 'We are committed to building long-term partnerships with our customers and providing excellent customer service and support.',
+                'aboutUsDesc1': 'ALMIC – Focused on Ophthalmology, Serving the World',
+                'aboutUsDesc2': 'With over 20 years of experience in ophthalmology, ALMIC operates in both Canada and China, proudly serving more than one million patients each year.',
+                'aboutUsDesc3': 'As a specialized manufacturer of single-use microsurgical instruments, ALMIC is also innovating in disposable vitrectomy cutters and related technologies—delivering reliable, cutting-edge solutions for eye care professionals worldwide.',
+                'aboutUsDesc4': 'In addition to manufacturing, ALMIC provides optometry services across Canada and China. Our dedicated ophthalmic sales team is committed to serving you with professionalism and expertise.',
+                'aboutUsDesc5': 'We invite your attention and collaboration as we work together toward better eye care for all.',
                 'productCenter': 'Product Center',
                 'viewDetails': 'View Details',
                 'patentProduct': 'Patent Product',
@@ -221,6 +227,9 @@
         function switchLanguage(lang) {
             currentLang = lang;
             document.documentElement.lang = lang;
+            
+            // 更新页面标题
+            document.title = translations[lang]['pageTitle'];
             
             // 更新所有带有data-i18n属性的元素
             document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -523,10 +532,19 @@
         </video>
         <div class="home-content">
             <h1 class="home-title" data-i18n="aboutUsDesc1">
-                ALMIC 致力于设计和生产高质量的眼科手术器械
+                ALMIC —— 专注眼科，服务全球
             </h1>
             <p class="home-description" data-i18n="aboutUsDesc2">
-                我们拥有先进的精密仪器设计和加工技术，以及多项专利技术，确保我们的产品在性能和可靠性方面达到最高标准。
+                ALMIC深耕眼科领域二十余年，业务遍及加拿大与中国，每年服务超过一百万名患者。
+            </p>
+            <p class="home-description" data-i18n="aboutUsDesc3">
+                作为一次性微创外科器械的专业制造商，ALMIC不断创新，研发用于玻璃体切割的一次性使用波切头及相关技术，为全球眼科专业人士提供可靠的解决方案。
+            </p>
+            <p class="home-description" data-i18n="aboutUsDesc4">
+                除产品制造外，ALMIC还在加拿大和中国提供视光服务。我们专业的眼科销售团队，始终以敬业的态度为您提供优质服务。
+            </p>
+            <p class="home-description" data-i18n="aboutUsDesc5">
+                我们诚挚邀请您的关注与合作，共同推进全球眼健康事业。
             </p>
             <a href="#products" class="home-button" data-i18n="viewProducts">
                 查看我们的产品
