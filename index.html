@@ -147,7 +147,36 @@
                 'exhibition': '展会信息',
                 'latestNews': '最新消息',
                 'latestNewsContent': 'ALMIC受邀参加2025年美国眼科医疗技术大会（AAO 2025），展位号#3755，期待与您相约佛罗里达州奥兰多！',
-                'latestNewsLink': '了解更多 →',
+                'latestNewsLink': '了解更多',
+                'product3Feature3': '安全防护',
+                'product3Feature3Desc': '多重安全保障机制',
+                
+                'product4Name': '眼科虹膜钩',
+                'product4Desc': '精密设计的眼科虹膜钩，采用优质不锈钢材料，为眼科手术提供精确的虹膜操作工具。',
+                'product4Feature1': '精密设计',
+                'product4Feature1Desc': '符合人体工程学的握持设计',
+                'product4Feature2': '优质材料',
+                'product4Feature2Desc': '采用医用级不锈钢',
+                'product4Feature3': '精确操作',
+                'product4Feature3Desc': '确保手术操作的精确性',
+                
+                'product5Name': 'Vannas剪刀',
+                'product5Desc': '专业级Vannas剪刀，适用于精细的眼科手术，提供卓越的切割性能和操作体验。',
+                'product5Feature1': '精细切割',
+                'product5Feature1Desc': '锋利的刀口确保精确切割',
+                'product5Feature2': '人体工程学',
+                'product5Feature2Desc': '优化的握持设计',
+                'product5Feature3': '耐用可靠',
+                'product5Feature3Desc': '持久的使用寿命',
+                
+                'product6Name': 'Wescott剪刀',
+                'product6Desc': '高品质Wescott剪刀，专为眼科手术设计，提供出色的切割性能和操作控制。',
+                'product6Feature1': '精确控制',
+                'product6Feature1Desc': '出色的操作手感',
+                'product6Feature2': '优质材料',
+                'product6Feature2Desc': '采用高级不锈钢',
+                'product6Feature3': '多功能性',
+                'product6Feature3Desc': '适用于多种眼科手术',
             },
             'en': {
                 'home': 'Home',
@@ -282,7 +311,36 @@
                 'exhibition': 'Exhibition',
                 'latestNews': 'Latest News',
                 'latestNewsContent': 'ALMIC is invited to AAO 2025 Annual Meeting! Visit us at Booth #3755 in Orlando, Florida.',
-                'latestNewsLink': 'Learn More →',
+                'latestNewsLink': 'Learn More',
+                'product3Feature3': 'Safety Protection',
+                'product3Feature3Desc': 'Multiple safety protection mechanisms',
+                
+                'product4Name': 'Iris Hook',
+                'product4Desc': 'Precision-designed iris hook made of high-quality stainless steel, providing accurate iris manipulation tools for ophthalmic surgery.',
+                'product4Feature1': 'Precision Design',
+                'product4Feature1Desc': 'Ergonomic grip design for optimal control',
+                'product4Feature2': 'Quality Material',
+                'product4Feature2Desc': 'Medical-grade stainless steel construction',
+                'product4Feature3': 'Precise Operation',
+                'product4Feature3Desc': 'Ensures surgical precision and control',
+                
+                'product5Name': 'Vannas Scissors',
+                'product5Desc': 'Professional-grade Vannas scissors for delicate ophthalmic surgery, offering exceptional cutting performance and handling experience.',
+                'product5Feature1': 'Precise Cutting',
+                'product5Feature1Desc': 'Sharp blades ensure accurate and clean cuts',
+                'product5Feature2': 'Ergonomic Design',
+                'product5Feature2Desc': 'Optimized grip for comfortable handling',
+                'product5Feature3': 'Durable & Reliable',
+                'product5Feature3Desc': 'Long-lasting performance and reliability',
+                
+                'product6Name': 'Wescott Scissors',
+                'product6Desc': 'High-quality Wescott scissors specifically designed for ophthalmic surgery, delivering superior cutting performance and operational control.',
+                'product6Feature1': 'Precise Control',
+                'product6Feature1Desc': 'Excellent handling and control during surgery',
+                'product6Feature2': 'Quality Material',
+                'product6Feature2Desc': 'Premium stainless steel construction',
+                'product6Feature3': 'Versatility',
+                'product6Feature3Desc': 'Suitable for various ophthalmic procedures',
             }
         };
 
@@ -417,11 +475,11 @@
             width: auto;
         }
         .logo-small {
-            height: 30px;
+            height: 60px;
             width: auto;
         }
         .footer-logo {
-            height: 50px;
+            height: 100px;
             width: auto;
             margin-bottom: 1rem;
         }
@@ -466,7 +524,7 @@
             z-index: 2;
         }
         .home-logo {
-            height: 80px;
+            height: 160px;
             width: auto;
             margin-bottom: 2rem;
         }
@@ -474,31 +532,41 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: white;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         .home-description {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             line-height: 1.6;
+        }
+        .home-slider {
+            position: relative;
+        }
+        .home-slider .home-button{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .home-button {
             display: inline-block;
             background-color: #2563eb;
             color: white;
-            padding: 1rem 2rem;
+            padding: 0.5rem 1.5rem;
             border-radius: 9999px;
-            font-size: 1.125rem;
+            font-size: 0.875rem;
             font-weight: 600;
-            transition: all 0.3s ease;
             text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 0;
         }
         .home-button:hover {
             background-color: #1d4ed8;
-            transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
         #video-section {
@@ -543,37 +611,44 @@
         }
         .latest-news {
             background: rgba(255, 255, 255, 0.25);
-            padding: 1rem 2rem;
+            padding: 1.5rem 1rem;
             border-radius: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(8px);
             max-width: 90%;
             width: 600px;
-            margin: 4rem auto;
+            margin: 2rem auto 0;
         }
         .latest-news-title {
-            color: #1e40af;
+            color:blanchedalmond;
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             text-align: center;
         }
         .latest-news-content {
             color: white;
             font-size: 1rem;
             line-height: 1.5;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
-        .latest-news-link {
-            color: #2563eb;
-            font-size: 0.875rem;
-            text-decoration: none;
+        .latest-news-btn {
             display: inline-block;
-            transition: color 0.3s;
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .latest-news-link:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
+        .latest-news-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
         }
         .product-image {
             width: 100%;
@@ -582,13 +657,64 @@
             border-radius: 0.375rem;
             margin-bottom: 1rem;
         }
+        /* 产品幻灯片样式 */
+        .product-slider {
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 800px;
+        }
+        .product-slider .slick-slide {
+            padding: 0 1rem;
+        }
+        .product-slider img {
+            width: 600px;
+            margin: 0 auto;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-slider .slick-prev,
+        .product-slider .slick-next {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .product-slider .slick-prev {
+            left: 10px;
+        }
+        .product-slider .slick-next {
+            right: 10px;
+        }
+        .product-slider .slick-prev:before,
+        .product-slider .slick-next:before {
+            color: #2563eb;
+            font-size: 24px;
+        }
+        .product-slider .slick-dots {
+            top: 10px;
+            left: 0px;
+        }
+        .product-slider .slick-dots li button:before {
+            color: white;
+            font-size: 12px;
+        }
+        .product-slider .slick-dots li.slick-active button:before {
+            color: #2563eb;
+        }
+        .slick-dotted.slick-slider {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
     <header class="bg-white shadow-md sticky top-0 z-10">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="/logo.jpg" alt="ALMIC Logo" class="logo">
+                <img src="/logo.png" alt="ALMIC Logo" class="logo">
             </a>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
@@ -614,7 +740,7 @@
     <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-20">
         <div class="bg-white w-80 h-full absolute right-0 p-6">
             <div class="flex justify-between items-center mb-4">
-                <img src="/logo.jpg" alt="ALMIC Logo" class="logo-small">
+                <img src="/logo.png" alt="ALMIC Logo" class="logo-small">
                 <button id="close-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none" aria-label="Close Menu">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -641,13 +767,28 @@
             <h1 class="home-title" data-i18n="aboutUsDesc1">
                 ALMIC —— 专注眼科，服务全球
             </h1>
-            <a href="#products" class="home-button" data-i18n="viewProducts">
-                查看我们的产品
-            </a>
+            
+            <!-- 产品幻灯片 -->
+            <div class="home-slider">
+                <div class="product-slider">
+                    <div><img src="/product1.png" alt="ALMIC Product 1"></div>
+                    <div><img src="/product2.png" alt="ALMIC Product 2"></div>
+                    <div><img src="/product3.png" alt="ALMIC Product 3"></div>
+                    <div><img src="/product4.png" alt="ALMIC Product 4"></div>
+                    <div><img src="/product5.png" alt="ALMIC Product 5"></div>
+                    <div><img src="/product6.png" alt="ALMIC Product 6"></div>
+                </div>
+
+                <a href="#products" class="home-button" data-i18n="viewProducts">
+                    查看我们的产品
+                </a>
+            </div>
             <div class="latest-news">
                 <div class="latest-news-title" data-i18n="latestNews">最新消息</div>
                 <div class="latest-news-content" data-i18n="latestNewsContent">ALMIC受邀参加2025年美国眼科医疗技术大会（AAO 2025），展位号#3755，期待与您相约佛罗里达州奥兰多！</div>
-                <a href="#news" class="latest-news-link" data-i18n="latestNewsLink">了解更多 →</a>
+                <div class="text-center">
+                    <a href="#news" class="latest-news-btn" data-i18n="latestNewsLink">了解更多</a>
+                </div>
             </div>
         </div>
     </section>
@@ -683,7 +824,7 @@
                 <h3 class="text-xl md:text-2xl font-semibold mb-6 text-center" data-i18n="vitrectomyProbe">核心产品</h3>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="relative">
-                        <img src="/product10.png" alt="Vitrectomy Probe" class="rounded-lg shadow-lg w-full">
+                        <img src="/product1.png" alt="Vitrectomy Probe" class="rounded-lg shadow-lg w-full">
                         <span class="absolute top-4 right-4 bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm" data-i18n="patentProduct">专利产品</span>
                     </div>
                     <div>
@@ -756,6 +897,69 @@
                         <div>
                             <h5 class="font-semibold text-gray-800" data-i18n="product3Feature3">安全防护</h5>
                             <p class="text-gray-600 text-sm" data-i18n="product3Feature3Desc">多重安全保障机制</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300" data-i18n="viewDetails">查看详情</a>
+                    <span class="inline-block bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs ml-2" data-i18n="patentProduct">专利产品</span>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="/product5.png" alt="眼科虹膜钩" class="product-image">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="product4Name">眼科虹膜钩</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="product4Desc">精密设计的眼科虹膜钩，采用优质不锈钢材料，为眼科手术提供精确的虹膜操作工具。</p>
+                    <div class="space-y-2 mb-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product4Feature1">精密设计</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product4Feature1Desc">符合人体工程学的握持设计</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product4Feature2">优质材料</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product4Feature2Desc">采用医用级不锈钢</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product4Feature3">精确操作</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product4Feature3Desc">确保手术操作的精确性</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300" data-i18n="viewDetails">查看详情</a>
+                    <span class="inline-block bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs ml-2" data-i18n="patentProduct">专利产品</span>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="/product6.png" alt="Vannas剪刀" class="product-image">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="product5Name">Vannas剪刀</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="product5Desc">专业级Vannas剪刀，适用于精细的眼科手术，提供卓越的切割性能和操作体验。</p>
+                    <div class="space-y-2 mb-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product5Feature1">精细切割</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product5Feature1Desc">锋利的刀口确保精确切割</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product5Feature2">人体工程学</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product5Feature2Desc">优化的握持设计</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product5Feature3">耐用可靠</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product5Feature3Desc">持久的使用寿命</p>
+                        </div>
+                    </div>
+                    <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300" data-i18n="viewDetails">查看详情</a>
+                    <span class="inline-block bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs ml-2" data-i18n="patentProduct">专利产品</span>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="/product7.png" alt="Wescott剪刀" class="product-image">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-i18n="product6Name">Wescott剪刀</h3>
+                    <p class="text-gray-600 mb-4" data-i18n="product6Desc">高品质Wescott剪刀，专为眼科手术设计，提供出色的切割性能和操作控制。</p>
+                    <div class="space-y-2 mb-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product6Feature1">精确控制</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product6Feature1Desc">出色的操作手感</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product6Feature2">优质材料</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product6Feature2Desc">采用高级不锈钢</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-800" data-i18n="product6Feature3">多功能性</h5>
+                            <p class="text-gray-600 text-sm" data-i18n="product6Feature3Desc">适用于多种眼科手术</p>
                         </div>
                     </div>
                     <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300" data-i18n="viewDetails">查看详情</a>
@@ -1007,7 +1211,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Logo和版权信息 -->
                 <div class="text-center md:text-left space-y-6">
-                    <img src="/logo.jpg" alt="ALMIC Logo" class="mx-auto md:mx-0 mb-4 footer-logo hover:opacity-90 transition-opacity duration-300">
+                    <img src="/logo.png" alt="ALMIC Logo" class="mx-auto md:mx-0 mb-4 footer-logo hover:opacity-90 transition-opacity duration-300">
                     <p class="text-gray-400 text-sm">© 2024 ALMIC. All Rights Reserved.</p>
                 </div>
 
@@ -1047,7 +1251,7 @@
                 </svg>
             </button>
             <h3 class="text-2xl font-semibold text-blue-700 mb-6" data-i18n="vitrectomyProbe">玻璃体切割刀</h3>
-            <img src="/product10.png" alt="Vitrectomy Probe" class="rounded-lg shadow-lg w-full">
+            <img src="/product1.png" alt="Vitrectomy Probe" class="rounded-lg shadow-lg w-full">
 
             <!-- 产品特点 -->
             <div class="border-t border-gray-200 pt-8">
@@ -1082,6 +1286,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script>
         $(document).ready(function(){
+            // 初始化产品幻灯片
+            $('.product-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                fade: true,
+                cssEase: 'linear',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
+            });
+
             // 模态框相关代码
             const productModal = document.getElementById('productModal');
             const closeModal = document.getElementById('closeModal');
