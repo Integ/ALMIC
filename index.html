@@ -35,7 +35,7 @@
                 'viewDetails': '查看详情',
                 'patentProduct': '专利产品',
                 'viewAllProducts': '查看所有产品',
-                'companyVideo': '公司视频',
+                'companyVideo': '产品视频',
                 'newsCenter': '新闻中心',
                 'readMore': '阅读更多',
                 'ourPromise': '我们的承诺',
@@ -217,7 +217,7 @@
                 'viewDetails': 'View Details',
                 'patentProduct': 'Patent Product',
                 'viewAllProducts': 'View All Products',
-                'companyVideo': 'Company Video',
+                'companyVideo': 'Product Video',
                 'newsCenter': 'News Center',
                 'readMore': 'Read More',
                 'ourPromise': 'Our Promise',
@@ -706,13 +706,29 @@
             padding: 0 1rem;
         }
         .product-slider img {
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
             height: 400px;
-            object-fit: fill;
+            object-fit: cover;
             border-radius: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+        }
+        
+        /* 移动端响应式样式 */
+        @media (max-width: 768px) {
+            #about .product-slider {
+                max-width: 600px;
+                padding: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #about .product-slider {
+                max-width: 360px;
+                padding: 0;
+            }
         }
         .product-slider .slick-prev,
         .product-slider .slick-next {
@@ -797,7 +813,7 @@
                     <li><a href="#latestnews" class="hover:text-primary transition duration-300" data-i18n="latestNews"></a></li>
                     <li><a href="#products" class="hover:text-primary transition duration-300" data-i18n="products">产品中心</a></li>
                     <li><a href="#news" class="hover:text-primary transition duration-300" data-i18n="news">新闻中心</a></li>
-                    <li><a href="#contact" class="hover:text-primary transition duration-300" data-i18n="contact">联系我们</a></li>
+                    <li><a href="#contact1" class="hover:text-primary transition duration-300" data-i18n="contact">联系我们</a></li>
                 </ul>
             </nav>
             <div class="flex items-center space-x-4">
@@ -969,7 +985,7 @@
 
     <section id="video-section" class="bg-primary-100 py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-8 text-center text-white" data-i18n="companyVideo">公司视频</h2>
+            <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-8 text-center text-white" data-i18n="companyVideo">产品视频</h2>
             <div class="flex justify-center">
                 <video controls autoplay loop muted width="800" class="rounded-lg">
                     <source src="/intro.mp4" type="video/mp4">
@@ -1071,7 +1087,7 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-gray-100 py-16 md:py-24">
+    <section id="contact1" class="bg-gray-100 py-16 md:py-24">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-4" data-i18n="contactUs">联系我们</h2>
@@ -1120,7 +1136,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div id="contact">
                 <form id="contactForm" class="bg-white rounded-lg shadow-md p-8">
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 text-sm font-bold mb-2">
