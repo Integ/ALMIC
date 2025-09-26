@@ -445,8 +445,8 @@
             };
             
             // 验证必填字段
-            if (!data.name || !data.country || !data.address || !data.email || !data.phone || 
-                !data.occupation || !data.company || !data.inquiryType || !data.message) {
+            if (!data.name || !data.country || !data.address || !data.email || 
+                !data.occupation || !data.company || !data.inquiryType) {
                 alert(translations[currentLang]['formRequired']);
                 return;
             }
@@ -1152,9 +1152,9 @@
                     </div>
                     <div class="mb-4">
                         <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">
-                            <span data-i18n="phone">联系电话</span> <span class="text-red-500">*</span>
+                            <span data-i18n="phone">联系电话</span>
                         </label>
-                        <input type="tel" id="phone" name="phone" required
+                        <input type="tel" id="phone" name="phone"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                     <div class="mb-4">
@@ -1177,19 +1177,19 @@
                         </label>
                         <select id="inquiryType" name="inquiryType" required
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="academicResearch" data-i18n="academicResearch">学术研究</option>
                             <option value="salesRep" data-i18n="salesRep">销售代表拜访</option>
                             <option value="sampleTest" data-i18n="sampleTest">样品测试</option>
                             <option value="buy" data-i18n="buy">购买</option>
-                            <option value="academicResearch" data-i18n="academicResearch">学术研究</option>
                             <option value="advise" data-i18n="advise">咨询建议</option>
                             <option value="others" data-i18n="others">其它</option>
                         </select>
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-gray-700 text-sm font-bold mb-2">
-                            <span data-i18n="message">留言</span> <span class="text-red-500">*</span>
+                            <span data-i18n="message">留言</span>
                         </label>
-                        <textarea id="message" name="message" required
+                        <textarea id="message" name="message"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y"></textarea>
                     </div>
                     <button type="submit" 
