@@ -35,7 +35,6 @@
                 'viewDetails': '查看详情',
                 'patentProduct': '专利产品',
                 'viewAllProducts': '查看所有产品',
-                'companyVideo': '产品视频',
                 'newsCenter': '新闻中心',
                 'readMore': '阅读更多',
                 'ourPromise': '我们的承诺',
@@ -217,7 +216,6 @@
                 'viewDetails': 'View Details',
                 'patentProduct': 'Patent Product',
                 'viewAllProducts': 'View All Products',
-                'companyVideo': 'Product Video',
                 'newsCenter': 'News Center',
                 'readMore': 'Read More',
                 'ourPromise': 'Our Promise',
@@ -608,25 +606,6 @@
             background-color: #3a4a7c;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
-        #video-section {
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        #video-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        #video-section > * {
-            position: relative;
-            z-index: 2;
-        }
         #slogans {
             background-size: cover;
             background-position: center;
@@ -995,18 +974,6 @@
                 </div>
             </div>
             <div class="mt-12 text-center">
-            </div>
-        </div>
-    </section>
-
-    <section id="video-section" class="bg-primary-100 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-semibold text-primary mb-8 text-center text-white" data-i18n="companyVideo">产品视频</h2>
-            <div class="flex justify-center">
-                <video controls autoplay loop muted width="800" class="rounded-lg">
-                    <source src="/intro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
             </div>
         </div>
     </section>
